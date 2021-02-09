@@ -13,7 +13,7 @@ ext: 'png'
   // load GeoJSON from an external file
   $.getJSON("https://raw.githubusercontent.com/gbrunner/adv-python-for-gis-and-rs/master/Week%201/sf_crime.geojson",function(data){
 var ratIcon = L.icon({
-    iconUrl: 'rat.gif',
+    iconUrl: 'http://maptimeboston.github.io/leaflet-intro/rat.gif',
     iconSize: [50,40]
   }); 
  L.geoJson(data  ,{
@@ -21,9 +21,5 @@ var ratIcon = L.icon({
     function(feature,latlng){
     return L.marker(latlng,{icon: ratIcon});
     }
-  }); 
-    
-    // add GeoJSON layer to the map once the file is loaded
-
-    L.geoJson(data).addTo(map);
+  }).addTo(map);
   });
