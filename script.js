@@ -17,8 +17,9 @@ var ratIcon = L.icon({
     iconSize: [50,40]
   }); 
  L.geoJson(data  ,{
-    pointToLayer:                           function(feature,latlng){
-	  return L.marker(latlng,{icon: ratIcon});
+    pointToLayer:                        
+    function(feature,latlng){
+    return L.marker(latlng,{icon: ratIcon});
     }
   }); 
     
